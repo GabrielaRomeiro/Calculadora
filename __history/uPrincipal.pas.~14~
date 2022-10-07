@@ -1,0 +1,302 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TCalculadora = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Button00: TButton;
+    Button08: TButton;
+    Button09: TButton;
+    Button03: TButton;
+    Button05: TButton;
+    Button06: TButton;
+    Button04: TButton;
+    Button02: TButton;
+    Button01: TButton;
+    Button07: TButton;
+    Buttonigual: TButton;
+    ButtonAdicao: TButton;
+    ButtonSubtracao: TButton;
+    ButtonMultiplicar: TButton;
+    ButtonDivisao: TButton;
+    EditVisor: TEdit;
+    ButtonLimpar: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure Button00Click(Sender: TObject);
+    procedure Button01Click(Sender: TObject);
+    procedure Button00KeyPress(Sender: TObject; var Key: Char);
+    procedure Button01KeyPress(Sender: TObject; var Key: Char);
+    procedure Button02Click(Sender: TObject);
+    procedure Button02KeyPress(Sender: TObject; var Key: Char);
+    procedure Button03Click(Sender: TObject);
+    procedure Button03KeyPress(Sender: TObject; var Key: Char);
+    procedure Button04Click(Sender: TObject);
+    procedure Button04KeyPress(Sender: TObject; var Key: Char);
+    procedure Button05Click(Sender: TObject);
+    procedure Button05KeyPress(Sender: TObject; var Key: Char);
+    procedure Button06Click(Sender: TObject);
+    procedure Button06KeyPress(Sender: TObject; var Key: Char);
+    procedure Button07Click(Sender: TObject);
+    procedure Button07KeyPress(Sender: TObject; var Key: Char);
+    procedure Button08Click(Sender: TObject);
+    procedure Button08KeyPress(Sender: TObject; var Key: Char);
+    procedure Button09Click(Sender: TObject);
+  private
+    { Private declarations }
+    valor_atual : double;
+    operacao : integer;
+    limpar : boolean;
+
+  public
+    { Public declarations }
+  end;
+
+var
+  Calculadora: TCalculadora;
+
+implementation
+
+{$R *.dfm}
+procedure TCalculadora.FormCreate(Sender: TObject);
+  begin
+     operacao := 0;
+     valor_atual := 0;
+     limpar := false;
+  end;
+
+
+procedure TCalculadora.Button00Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '0' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '0';
+  end;
+
+procedure TCalculadora.Button00KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('0') then
+     begin
+       Button00.Click;
+     end;
+  end;
+
+procedure TCalculadora.Button01Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '1' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '1';
+  end;
+
+procedure TCalculadora.Button01KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('1') then
+     begin
+       Button01.Click;
+     end;
+  end;
+
+procedure TCalculadora.Button02Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '2' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '2';
+  end;
+
+procedure TCalculadora.Button02KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('2') then
+     begin
+       Button02.Click;
+     end;
+  end;
+
+
+procedure TCalculadora.Button03Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '3' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '3';
+  end;
+
+procedure TCalculadora.Button03KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('3') then
+     begin
+       Button03.Click;
+     end;
+  end;
+
+
+procedure TCalculadora.Button04Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '4' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '4';
+  end;
+
+procedure TCalculadora.Button04KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('4') then
+     begin
+       Button04.Click;
+     end;
+  end;
+
+
+procedure TCalculadora.Button05Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '5' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '5';
+  end;
+
+
+procedure TCalculadora.Button05KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('5') then
+     begin
+       Button05.Click;
+     end;
+  end;
+
+procedure TCalculadora.Button06Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '6' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '6';
+  end;
+
+procedure TCalculadora.Button06KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('6') then
+     begin
+       Button06.Click;
+     end;
+  end;
+
+procedure TCalculadora.Button07Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '7' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '7';
+  end;
+
+procedure TCalculadora.Button07KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('7') then
+     begin
+       Button07.Click;
+     end;
+  end;
+
+procedure TCalculadora.Button08Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '8' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '8';
+  end;
+
+
+procedure TCalculadora.Button08KeyPress(Sender: TObject; var Key: Char);
+  begin
+    if key = char('8') then
+     begin
+       Button08.Click;
+     end;
+  end;
+
+
+procedure TCalculadora.Button09Click(Sender: TObject);
+  begin
+    if limpar then
+    begin
+      EditVisor.Text := '';
+      limpar := false;
+    end;
+
+    if EditVisor.Text = '9' then
+    begin
+       EditVisor.Text := ''
+    end;
+    EditVisor.Text := EditVisor.Text + '9';
+  end;
+
+end.
